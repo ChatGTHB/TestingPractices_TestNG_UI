@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suit 1">
+    <test name="Test 1">
+        <parameter name="search" value="shipments"></parameter>
+        <classes>
+            <class name="testNG_2.Task_2"></class>
+        </classes>
+    </test>
+
+</suite>
