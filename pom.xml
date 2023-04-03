@@ -15,12 +15,25 @@
     </properties>
 
     <dependencies>
+
+<!--
+ TODO
+  Maven, proje yapısını, bağımlılıkları, yapıyı ve test yönetimini tanımlamak için kullanılır.
+  pom.xml(Maven) kullanarak, test oluşturmak ve kod çalıştırmak için gereken bağımlılıkları yapılandırabilirsiniz.
+  Maven, projeyi oluştururken gerekli dosyaları depodan otomatik olarak indirir.
+  Ne lazım bize?
+  1. selenium-java
+  2. cucumber-java
+  3. jUnit
+ -->
+        <!--> for Selenium-Java -->
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
             <version>4.8.3</version>
         </dependency>
 
+        <!--> for TestNg -->
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
@@ -33,6 +46,17 @@
             <artifactId>commons-lang3</artifactId>
             <version>3.12.0</version>
         </dependency>
+
+        <!--> for Cucumber-Java -->
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-java</artifactId>
+            <version>7.9.0</version>
+            <scope>test</scope>
+        </dependency>
+
     </dependencies>
+
+
 
 </project>
