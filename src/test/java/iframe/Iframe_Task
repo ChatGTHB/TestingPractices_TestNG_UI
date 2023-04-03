@@ -1,0 +1,14 @@
+
+ senaryo 1:
+       https://demoqa.com/frames  sitesine gidin.
+       kac tane iframe oldugunu bulun.
+
+ senaryo 2:
+ https://demoqa.com/frames  sitesine gidin.
+ "This is a sample page" textini ekrana yazdirin;
+
+ senaryo 3:
+        https://demoqa.com/browser-windows sitesine gidiniz.
+        new tab a tiklayiniz.
+        acilan sayfada "This is a sample page" textini yazdiriniz.
+
