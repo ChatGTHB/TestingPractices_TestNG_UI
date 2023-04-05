@@ -1,17 +1,18 @@
 Feature: Foreign Currency Functionality
 
 
-  Scenario:
+  Background:
     Given Navigate to website
     And Enter username as "username" and password as "password"
     When click login button
     Then Verify that you are logged in.
-    Given Click to online pay bills
-    When Click to Pay Bills button
+
 
   @RegressionTest
   Scenario Outline:Convert amount to dollars
-    Then Click to Purchase Foreign Currency button
+    When Click to Online Banking
+    And Click to Pay Bills button
+    And Click to Purchase Foreign Currency button
     And select currency as "<value>"
     And Enter to Amount as "<amount>"
     And Click to Dollar checkbox

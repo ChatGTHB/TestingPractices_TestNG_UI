@@ -3,7 +3,6 @@ package cucumber_2.StepDefinitions;
 import cucumber_2.Pages.PayBillsPage;
 import cucumber_2.Utilities.BaseDriver;
 import io.cucumber.java.en.And;
-import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.WebDriver;
@@ -11,25 +10,23 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-
-
 import java.time.Duration;
 
 public class _02_foreignCurrency extends BaseDriver {
     WebDriver driver = BaseDriver.getDriver();
     PayBillsPage PayBillsPage = new PayBillsPage();
 
-    @Given("Click to online pay bills")
-    public void clickToOnlinePayBills() {
+    @When("Click to Online Banking")
+    public void clickToOnlineBanking() {
         PayBillsPage.onlineBanking.click();
     }
 
-    @When("Click to Pay Bills button")
+    @And("Click to Pay Bills button")
     public void clickToPayBillsButton() {
         PayBillsPage.payBills.click();
     }
 
-    @Then("Click to Purchase Foreign Currency button")
+    @And("Click to Purchase Foreign Currency button")
     public void clickToPurchaseForeignCurrencyButton() {
         PayBillsPage.purchaseButton.click();
     }

@@ -2,7 +2,6 @@ package cucumber_2.Utilities;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 
 public class BaseDriver {
 
@@ -11,17 +10,14 @@ public class BaseDriver {
     public static WebDriver getDriver() {
 
         if (driver == null) {
-            ChromeOptions options = new ChromeOptions();
-            options.addArguments("--remote-allow-origins=*");
-            driver = new ChromeDriver(options);
+            driver = new ChromeDriver();
         }
         return driver;
     }
 
-    public static void DriverQuit() {
+    public static void DriverQuit() throws InterruptedException {
 
-
-
+       Thread.sleep(2000);
         if (driver != null) {
             driver.quit();
             driver = null;

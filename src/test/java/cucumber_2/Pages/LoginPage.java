@@ -11,7 +11,6 @@ public class LoginPage {
         PageFactory.initElements(BaseDriver.getDriver(),this);
     }
 
-
     @FindBy(className = "icon-user")
     public WebElement userIcon;
 

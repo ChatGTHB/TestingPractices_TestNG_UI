@@ -1,9 +1,8 @@
 package cucumber_2.StepDefinitions;
 
-import cucumber_1.utility_C1.BaseDriver;
+import cucumber_2.Utilities.BaseDriver;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
-
 
 public class Hooks {
 
@@ -14,9 +13,8 @@ public class Hooks {
     }
 
     @After
-    public void after()
-    {
+    public void after() throws InterruptedException {
         System.out.println("Senaryo Bitti");
-        BaseDriver.quitDriver();
+        BaseDriver.DriverQuit();
     }
 }
