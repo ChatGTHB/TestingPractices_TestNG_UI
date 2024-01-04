@@ -5,11 +5,18 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import utility.GenelBaseDriver;
+import utility.BaseDriver;
 
-public class Wait extends GenelBaseDriver {
+import java.time.Duration;
+
+
+public class Wait extends BaseDriver {
+
+    WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(30));
+
     @Test
     public void test1(){
         driver.get("http://seleniumpractise.blogspot.com/2016/08/how-to-use-explicit-wait-in-selenium.html");
@@ -48,6 +55,6 @@ public class Wait extends GenelBaseDriver {
         wait.until(ExpectedConditions.elementToBeClickable(text));
 
         Assert.assertEquals("Selenium", text.getText());
-        BekleVeKapat();
+        waitAndClose();
     }
 }

@@ -7,12 +7,13 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
-import utility.GenelBaseDriver;
+import utility.BaseDriver;
+import utility.MyFunction;
 
 import java.time.Duration;
 import java.util.List;
 
-public class Solution_2 extends GenelBaseDriver {
+public class Solution_2 extends BaseDriver {
     Actions actions = new Actions(driver);
     WebDriverWait wait= new WebDriverWait(driver, Duration.ofSeconds(30));  // ihtiyaç olursa diye eklendi
     Action action;
@@ -57,8 +58,8 @@ public class Solution_2 extends GenelBaseDriver {
 
         for (WebElement i : list){
             actions.dragAndDrop(i, trash).build().perform();
-            Bekle(1);
+            MyFunction.wait(1);
         }
-        BekleVeKapat();
+        waitAndClose();
     }
 }

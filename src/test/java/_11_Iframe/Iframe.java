@@ -3,12 +3,12 @@ package _11_Iframe;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
-import utility.GenelBaseDriver;
+import utility.BaseDriver;
 
 import java.util.List;
 import java.util.Set;
 
-public class Iframe extends GenelBaseDriver {
+public class Iframe extends BaseDriver {
     @Test
     public void test1() {
 
@@ -53,7 +53,7 @@ public class Iframe extends GenelBaseDriver {
         WebElement text = driver.findElement(By.cssSelector("#sampleHeading"));
         System.out.println(text.getText());
 
-        BekleVeKapat();
+        waitAndClose();
 
     }
 }

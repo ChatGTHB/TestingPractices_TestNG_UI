@@ -6,12 +6,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
-import utility.GenelBaseDriver;
+import utility.BaseDriver;
 
 import java.time.Duration;
 import java.util.ArrayList;
 
-public class Scroll  extends GenelBaseDriver {
+public class Scroll  extends BaseDriver {
 
     @Test
     public void scrollDownUp()
@@ -29,11 +29,8 @@ public class Scroll  extends GenelBaseDriver {
         wait.until(ExpectedConditions.visibilityOf(topBar));
 
         JavascriptExecutor js = (JavascriptExecutor) driver;
-        Bekle(3);
         js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
-        Bekle(4);
         js.executeScript("window.scrollTo(document.body.scrollHeight,0)");
-        Bekle(3);
 
     }
 
@@ -64,7 +61,6 @@ public class Scroll  extends GenelBaseDriver {
         WebElement kedicik2 = driver.findElement(By.id("a14"));
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].scrollIntoView();",kedicik1);
-        Bekle(2);
         js.executeScript("arguments[0].scrollIntoView();",kedicik2);
     }
 
@@ -81,7 +77,6 @@ public class Scroll  extends GenelBaseDriver {
         {
             texts = driver.findElement(By.xpath("(//*[@class='jscroll-added'])["+i+"]"));
             arrayList.add(i-1,texts.getText());
-            Bekle(1);
             js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
             i++;
         }
@@ -89,6 +84,6 @@ public class Scroll  extends GenelBaseDriver {
         for (int j = 0; j < arrayList.size(); j++) {
             System.out.println(j+1+".Paragraf : " + arrayList.get(j));
         }
-        BekleVeKapat();
+        waitAndClose();
     }
 }
