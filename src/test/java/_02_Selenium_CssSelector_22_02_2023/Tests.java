@@ -10,7 +10,7 @@ import utility.MyFunction;
 public class Tests extends BaseDriver {
 
     @Test
-    public void test1(){
+    public void test1() {
         driver.get("http://demoqa.com/text-box");
 
         WebElement fullName = driver.findElement(By.cssSelector("[placeholder='Full Name']"));
@@ -26,7 +26,7 @@ public class Tests extends BaseDriver {
         permanentAddress.sendKeys("Testing Permanent Address");
 
         MyFunction.wait(2);
-        WebElement submitButton= driver.findElement(By.cssSelector("[id='submit']"));
+        WebElement submitButton = driver.findElement(By.cssSelector("[id='submit']"));
         submitButton.click();
 
         //Assert.assertTrue(fullName.getText().contains(automation));
@@ -36,7 +36,7 @@ public class Tests extends BaseDriver {
     }
 
     @Test
-    public void test2(){
+    public void test2() {
 
         driver.get("https://demo.applitools.com/");
 
@@ -47,16 +47,16 @@ public class Tests extends BaseDriver {
         password.sendKeys("techno123.");
 
         MyFunction.wait(2);
-        WebElement signInButton= driver.findElement(By.cssSelector("[id='log-in']"));
+        WebElement signInButton = driver.findElement(By.cssSelector("[id='log-in']"));
         signInButton.click();
 
-        WebElement verificationMessage=driver.findElement(By.cssSelector("h6[id='time']"));
-        Assert.assertTrue(verificationMessage.getText().equals("Your nearest branch closes in: 30m 5s"));
+        WebElement verificationMessage = driver.findElement(By.cssSelector("h6[id='time']"));
+        Assert.assertEquals("Your nearest branch closes in: 30m 5s", verificationMessage.getText());
 
     }
 
     @Test
-    public void test3(){
+    public void test3() {
 
         driver.get("https://www.snapdeal.com/");
 
@@ -64,16 +64,16 @@ public class Tests extends BaseDriver {
         searchBox.sendKeys("teddy bear");
 
         MyFunction.wait(2);
-        WebElement searchButton= driver.findElement(By.cssSelector("[class='searchTextSpan']"));
+        WebElement searchButton = driver.findElement(By.cssSelector("[class='searchTextSpan']"));
         searchButton.click();
 
-        WebElement confirmation= driver.findElement(By.cssSelector("[id='searchMessageContainer']"));
+        WebElement confirmation = driver.findElement(By.cssSelector("[id='searchMessageContainer']"));
 
         Assert.assertTrue(confirmation.getText().contains("results for teddy bear"));
     }
 
     @Test
-    public void test4(){
+    public void test4() {
 
         driver.get("https://testpages.herokuapp.com/styled/index.html");
 
@@ -91,13 +91,13 @@ public class Tests extends BaseDriver {
         WebElement calculator2Button = driver.findElement(By.cssSelector("[id='calculate']"));
         calculator2Button.click();
 
-        WebElement result= driver.findElement(By.cssSelector("[id='answer']"));
+        WebElement result = driver.findElement(By.cssSelector("[id='answer']"));
         System.out.println(result.getText());
 
     }
 
     @Test
-    public void test5(){
+    public void test5() {
 
         driver.get("https://testpages.herokuapp.com/styled/index.html");
 
@@ -115,7 +115,7 @@ public class Tests extends BaseDriver {
     }
 
     @Test
-    public void test6(){
+    public void test6() {
 
         driver.get("https://testpages.herokuapp.com/styled/index.html");
 

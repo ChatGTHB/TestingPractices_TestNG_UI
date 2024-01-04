@@ -64,8 +64,7 @@ public class Xpath_2 {
         Double PriceCard = Double.parseDouble(priceCard.getText().replaceAll("[^\\d+\\.\\+]", ""));
         System.out.println(PriceCard);
 
-        Assert.assertTrue(nameInCard.getText().toLowerCase().contains("beats pill")
-                && AcPrice.equals(PriceCard));
+        Assert.assertTrue(nameInCard.getText().toLowerCase().contains("beats pill") && AcPrice.equals(PriceCard));
         driver.quit();
 
     }

@@ -5,9 +5,9 @@ import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 import utility.BaseDriver;
 
-public class testNG_1_Task extends BaseDriver {
+public class TestNG_1_Task extends BaseDriver {
     @Test
-    public   void loginTest(){
+    public void loginTest() {
 
         // URL adresini acmak icin
         driver.get("https://www.saucedemo.com/");
@@ -24,10 +24,10 @@ public class testNG_1_Task extends BaseDriver {
 
         WebElement loginBtn = driver.findElement(By.id("login-button"));
         loginBtn.click();
-
     }
-    @Test(dependsOnMethods="loginTest")
-    public void addToCartTest(){
+
+    @Test(dependsOnMethods = "loginTest")
+    public void addToCartTest() {
         WebElement product_1 = driver.findElement(By.id("add-to-cart-sauce-labs-backpack"));
         product_1.click();
 
@@ -36,6 +36,5 @@ public class testNG_1_Task extends BaseDriver {
 
         WebElement shoppingCart = driver.findElement(By.className("shopping_cart_link"));
         shoppingCart.click();
-
     }
 }

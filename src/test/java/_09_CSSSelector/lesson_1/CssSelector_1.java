@@ -47,7 +47,6 @@ public class CssSelector_1 {
         companyName.sendKeys("Techno Study");
 
         driver.quit();
-
     }
 
 }

@@ -459,14 +459,7 @@ public class Tests extends BaseDriver {
             }
         }
         Actions actions = new Actions(driver);
-        Action action = actions.
-                moveToElement(firstNameBox).
-                click().
-                keyDown(Keys.BACK_SPACE).
-                keyUp(Keys.BACK_SPACE).
-                keyDown(Keys.BACK_SPACE).
-                keyUp(Keys.BACK_SPACE).
-                build();
+        Action action = actions.moveToElement(firstNameBox).click().keyDown(Keys.BACK_SPACE).keyUp(Keys.BACK_SPACE).keyDown(Keys.BACK_SPACE).keyUp(Keys.BACK_SPACE).build();
         action.perform();
 
         WebElement usernameBox = driver.findElement(By.xpath("//input[@placeholder='Username']"));

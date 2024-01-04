@@ -54,6 +54,5 @@ public class Iframe extends BaseDriver {
         System.out.println(text.getText());
 
         waitAndClose();
-
     }
 }

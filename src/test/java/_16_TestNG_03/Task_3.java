@@ -14,6 +14,10 @@ import java.util.List;
 
 public class Task_3 extends BaseDriver {
 
+    public static String randomString() {
+        return RandomStringUtils.randomAlphanumeric(8);
+    }
+
     @Test(dataProvider = "getData")
     public void loginTest(String username, String password) {
 
@@ -96,9 +100,5 @@ public class Task_3 extends BaseDriver {
         credentialList.add(new Object[]{"problem_user", randomString()});
 
         return credentialList.iterator();
-    }
-
-    public static String randomString() {
-        return RandomStringUtils.randomAlphanumeric(8);
     }
 }

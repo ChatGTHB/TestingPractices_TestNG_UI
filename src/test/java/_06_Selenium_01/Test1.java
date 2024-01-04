@@ -13,8 +13,9 @@ public class Test1 extends BaseDriver {
     // String mail="testing@testing.com";
 
     // Test esnasında kullanılmak üzere oluşturulmuş random mail
-    String mail="testing"+((int)(Math.random()*10000))+"@testing.com";
-    String password="abCD123456.";
+    String mail = "testing" + ((int) (Math.random() * 10000)) + "@testing.com";
+    String password = "abCD123456.";
+
     @Test
     public void scenerio1() {
 
@@ -64,28 +65,27 @@ public class Test1 extends BaseDriver {
         Assert.assertTrue(successMessageStr.contains("completed"));
 
 
-        WebElement login=driver.findElement(By.cssSelector("a[class='ico-login']"));
+        WebElement login = driver.findElement(By.cssSelector("a[class='ico-login']"));
         login.click();
 
 
-        WebElement eMailInputInLoginPage=driver.findElement(By.cssSelector("input[id='Email']"));
+        WebElement eMailInputInLoginPage = driver.findElement(By.cssSelector("input[id='Email']"));
         eMailInputInLoginPage.sendKeys(mail);
 
 
-        WebElement passwordInputInLoginPage=driver.findElement(By.cssSelector("input[class='password']"));
+        WebElement passwordInputInLoginPage = driver.findElement(By.cssSelector("input[class='password']"));
         passwordInputInLoginPage.sendKeys(password);
 
 
-        WebElement loginButton=driver.findElement(By.cssSelector("button[class='button-1 login-button']"));
+        WebElement loginButton = driver.findElement(By.cssSelector("button[class='button-1 login-button']"));
         loginButton.click();
 
 
-        WebElement logoutLink=driver.findElement(By.cssSelector("a[class='ico-logout']"));
+        WebElement logoutLink = driver.findElement(By.cssSelector("a[class='ico-logout']"));
 
 
         Assert.assertTrue(logoutLink.isDisplayed());
 
         waitAndClose();
     }
-
 }

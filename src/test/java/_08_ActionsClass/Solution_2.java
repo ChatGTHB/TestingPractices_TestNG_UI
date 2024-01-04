@@ -15,11 +15,11 @@ import java.util.List;
 
 public class Solution_2 extends BaseDriver {
     Actions actions = new Actions(driver);
-    WebDriverWait wait= new WebDriverWait(driver, Duration.ofSeconds(30));  // ihtiyaç olursa diye eklendi
+    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));  // ihtiyaç olursa diye eklendi
     Action action;
 
     @Test
-    public void test1(){
+    public void test1() {
         driver.get("https://www.browserstack.com/");
         actions.click(driver.findElement(By.xpath("//button[@id='accept-cookie-notification']")));
         actions.click(driver.findElement(By.id("signupModalButton")));
@@ -27,19 +27,18 @@ public class Solution_2 extends BaseDriver {
 //        WebElement getStartedFree = driver.findElement(By.id("signupModalButton"));
 //        action = actions.moveToElement(getStartedFree).build();
 //        action.perform();
-
     }
 
     @Test
-    public void test2(){
+    public void test2() {
         driver.get("https://www.browserstack.com/");
-        actions.moveToElement( driver.findElement(By.xpath("(//a[@title='Live'])[2]")));
+        actions.moveToElement(driver.findElement(By.xpath("(//a[@title='Live'])[2]")));
         WebElement automate = driver.findElement(By.xpath("(//a[@title='App Automate'])[3]"));
         actions.click(automate).perform();
     }
 
     @Test
-    public void test3(){
+    public void test3() {
         driver.get("https://www.browserstack.com/");
         actions.doubleClick(driver.findElement(By.xpath("//a[@id='free-trial-link-anchor']")));
         actions.perform();
@@ -47,7 +46,7 @@ public class Solution_2 extends BaseDriver {
     }
 
     @Test
-    public void test4(){
+    public void test4() {
         driver.get("https://www.globalsqa.com/demo-site/draganddrop/");
         WebElement iframe = driver.findElement(By.xpath("//iframe[@class='demo-frame lazyloaded']"));
         driver.switchTo().frame(iframe);
@@ -56,7 +55,7 @@ public class Solution_2 extends BaseDriver {
         wait.until(ExpectedConditions.visibilityOfAllElements(list));
         WebElement trash = driver.findElement(By.xpath("//div[@class='ui-widget-content ui-state-default ui-droppable']"));
 
-        for (WebElement i : list){
+        for (WebElement i : list) {
             actions.dragAndDrop(i, trash).build().perform();
             MyFunction.wait(1);
         }

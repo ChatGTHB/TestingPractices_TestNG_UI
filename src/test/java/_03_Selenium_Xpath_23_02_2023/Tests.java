@@ -47,7 +47,7 @@ public class Tests extends BaseDriver {
         WebElement signInButton = driver.findElement(By.xpath("//a[text()='Sign in']"));
         signInButton.click();
 
-        WebElement verificationMessage=driver.findElement(By.xpath("//h6[text()='Your nearest branch closes in: 30m 5s']"));
+        WebElement verificationMessage = driver.findElement(By.xpath("//h6[text()='Your nearest branch closes in: 30m 5s']"));
         Assert.assertEquals("Your nearest branch closes in: 30m 5s", verificationMessage.getText());
     }
 
@@ -63,7 +63,7 @@ public class Tests extends BaseDriver {
         WebElement searchButton = driver.findElement(By.xpath("//span[@class='searchTextSpan']"));
         searchButton.click();
 
-        WebElement confirmation= driver.findElement(By.xpath("//div[@id='searchMessageContainer']"));
+        WebElement confirmation = driver.findElement(By.xpath("//div[@id='searchMessageContainer']"));
 
         Assert.assertTrue(confirmation.getText().contains("results for teddy bear"));
     }
