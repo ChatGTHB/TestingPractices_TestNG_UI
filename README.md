@@ -1,6 +1,6 @@
-#Testing Exercises
+# Testing Exercises
 
-##JUnit
-##Selenium
-##TestNG
-##Cucumber
+## JUnit
+## Selenium
+## TestNG
+## Cucumber
