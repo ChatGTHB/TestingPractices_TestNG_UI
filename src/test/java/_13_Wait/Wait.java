@@ -15,10 +15,10 @@ import java.time.Duration;
 
 public class Wait extends BaseDriver {
 
-    WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(30));
+    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 
     @Test
-    public void test1(){
+    public void test1() {
         driver.get("http://seleniumpractise.blogspot.com/2016/08/how-to-use-explicit-wait-in-selenium.html");
 
         WebElement button = driver.findElement(By.xpath("//*[text()='Click me to start timer']"));
@@ -29,7 +29,7 @@ public class Wait extends BaseDriver {
     }
 
     @Test
-    public void test2(){
+    public void test2() {
         driver.get(" https://qatest.twoplugs.com/");
 
         WebElement element = driver.findElement(By.xpath("//span[text()='What do I need to sign up?']"));
@@ -43,7 +43,7 @@ public class Wait extends BaseDriver {
     }
 
     @Test
-    public void test3(){
+    public void test3() {
         driver.get("https://www.google.com/");
 
         Actions actions = new Actions(driver);
