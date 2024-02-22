@@ -2,7 +2,6 @@ package utility;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 import java.util.logging.Level;
@@ -13,6 +12,7 @@ public class BaseDriver {
     public static WebDriver driver;
 
     static {
+
         Logger logger = Logger.getLogger(""); // output'a ait bütün logları üreten objeye/servise ulaştım ""
         logger.setLevel(Level.SEVERE);              // Sadece errorları göster
 
@@ -32,7 +32,6 @@ public class BaseDriver {
         // elemente özel işlem yapılmadan önce
         // hazır hale gelmesi verilen mühlet yani süre.
         // eğer 2 sn yüklerse 30 sn. beklemez.
-
     }
 
     public static void waitAndClose() {
