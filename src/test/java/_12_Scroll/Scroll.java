@@ -30,7 +30,6 @@ public class Scroll extends BaseDriver {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
         js.executeScript("window.scrollTo(document.body.scrollHeight,0)");
-
     }
 
     @Test
