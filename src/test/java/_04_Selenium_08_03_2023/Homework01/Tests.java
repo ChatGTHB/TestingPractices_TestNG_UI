@@ -1,4 +1,4 @@
-package _04_Selenium_08_03_2023;
+package _04_Selenium_08_03_2023.Homework01;
 
 import org.junit.Assert;
 import org.junit.Test;
