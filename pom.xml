@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
@@ -16,16 +16,16 @@
 
     <dependencies>
 
-<!--
- TODO
-  Maven, proje yapısını, bağımlılıkları, yapıyı ve test yönetimini tanımlamak için kullanılır.
-  pom.xml(Maven) kullanarak, test oluşturmak ve kod çalıştırmak için gereken bağımlılıkları yapılandırabilirsiniz.
-  Maven, projeyi oluştururken gerekli dosyaları depodan otomatik olarak indirir.
-  Ne lazım bize?
-  1. selenium-java
-  2. cucumber-java
-  3. jUnit
- -->
+        <!--
+         TODO
+          Maven, proje yapısını, bağımlılıkları, yapıyı ve test yönetimini tanımlamak için kullanılır.
+          pom.xml(Maven) kullanarak, test oluşturmak ve kod çalıştırmak için gereken bağımlılıkları yapılandırabilirsiniz.
+          Maven, projeyi oluştururken gerekli dosyaları depodan otomatik olarak indirir.
+          Ne lazım bize?
+          1. selenium-java
+          2. cucumber-java
+          3. jUnit
+         -->
         <!--> for Selenium-Java -->
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
@@ -60,6 +60,7 @@
             <artifactId>cucumber-testng</artifactId>
             <version>7.11.1</version>
         </dependency>
+
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
@@ -67,8 +68,16 @@
             <scope>test</scope>
         </dependency>
 
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.8.0-beta2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+            <version>1.8.0-beta2</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
-
-
-
 </project>
