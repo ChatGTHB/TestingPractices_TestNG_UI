@@ -1,18 +1,23 @@
 
 Task 1:
-     "http://seleniumpractise.blogspot.in/2016/08/how-to-use-explicit-_13_Wait-in-selenium.html" sitesine gidiniz.
-     Click me to start timer butonun atiklatiniz.
-     _13_Wait kullanarak Selenium,QTP ve Webdriver yazilari gorulene kadar bekletiniz.
-     Webdriver goruluyor mu dogrulugunu kontrol ediniz.
+
+ "http://seleniumpractise.blogspot.in/2016/08/how-to-use-explicit-_13_Wait-in-selenium.html" sitesine gidiniz.
+ Click me to start timer butonuna tiklatiniz.
+ wait kullanarak Selenium,QTP ve Webdriver yazilari gorulene kadar bekletiniz.
+ Webdriver goruluyor mu dogrulugunu kontrol ediniz.
+
 
  Task 2:
-        https://qatest.twoplugs.com/ sitesine gidiniz.
-        What do I need to sign up?  sorusuna tiklatiniz.
-        "You need a facebook account or a valid email address to sign up." texti gorulene kadar bekletiniz.
-        Text gorunuyor mu dogrulayiniz.
+
+ https://qatest.twoplugs.com/ sitesine gidiniz.
+ What do I need to sign up?  sorusuna tiklatiniz.
+ "You need a facebook account or a valid email address to sign up." texti gorulene kadar bekletiniz.
+ Text gorunuyor mu dogrulayiniz.
+
 
  Task 3:
-       https://google.com/  sitesine gidiniz.
-       search kismina selenium gonderip Enter'a basiniz.
-       Element tiklanabilir olana kadar bekletiniz.
-       Sonuclar kismindan ilk sonucun selenium icerdigini kontrol ediniz.
+
+ https://google.com/  sitesine gidiniz.
+ search kismina selenium gonderip Enter'a basiniz.
+ Element tiklanabilir olana kadar bekletiniz.
+ Sonuclar kismindan ilk sonucun selenium icerdigini kontrol ediniz.
