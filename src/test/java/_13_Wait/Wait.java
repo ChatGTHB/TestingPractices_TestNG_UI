@@ -84,7 +84,7 @@ public class Wait extends BaseDriver {
                 .build();
         action.perform();
 
-        WebElement theFirstLink = driver.findElement(By.xpath("//h3[theFirstLink()='Selenium']"));
+        WebElement theFirstLink = driver.findElement(By.xpath("//h3[text()='Selenium']"));
         wait.until(ExpectedConditions.elementToBeClickable(theFirstLink));
 
         Assert.assertEquals("Selenium", theFirstLink.getText());
