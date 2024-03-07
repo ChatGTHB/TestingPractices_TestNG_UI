@@ -97,12 +97,12 @@ public class Iframe extends BaseDriver {
         WebElement newTab = driver.findElement(By.xpath("//button[text()='New Tab']"));  //#tabButtonWrapper>button
         newTab.click();
 
-        Set<String> windowID = driver.getWindowHandles();
-        for (String i : windowID) {
-            if (i.equals(url)) {
+        Set<String> windowIDs = driver.getWindowHandles();
+        for (String windowID : windowIDs) {
+            if (windowID.equals(url)) {
                 continue;
             }
-            driver.switchTo().window(i);
+            driver.switchTo().window(windowID);
         }
 
         WebElement text = driver.findElement(By.cssSelector("#sampleHeading"));
