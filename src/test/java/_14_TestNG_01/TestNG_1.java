@@ -5,12 +5,12 @@ import org.testng.annotations.Test;
 
 public class TestNG_1 {
     @Test
-    public void WebStudentLogin() {
+    public void webStudentLogin() {
         System.out.println("Student login through web");
     }
 
     @Test
-    public void MobileStudentLogin() {
+    public void mobileStudentLogin() {
         System.out.println("Student login through mobile");
     }
 
@@ -70,8 +70,8 @@ public class TestNG_1 {
 
     @Test
     public void testCase() {
-        String text1 = "java bir programlama dilidir";
-        String text2 = "java bir programlama dilidir";
+        String text1 = "Java is a programming language.";
+        String text2 = "Java is a programming language.";
         Assert.assertSame(text2, text2);
     }
 

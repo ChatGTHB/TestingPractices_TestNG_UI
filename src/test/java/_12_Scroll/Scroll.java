@@ -40,15 +40,15 @@ public class Scroll extends BaseDriver {
 
         driver.get("https://the-internet.herokuapp.com/infinite_scroll");
         ArrayList<String> arrayList = new ArrayList<>();
-        WebElement texts;
+        WebElement text;
         JavascriptExecutor js = (JavascriptExecutor) driver;
 
         for (int i = 1; i < 11; i++) {
             MyFunction.wait(1);
-            texts = driver.findElement(By.xpath("(//*[@class='jscroll-added'])[" + i + "]"));
-            arrayList.add(i - 1, texts.getText());
+            text = driver.findElement(By.xpath("(//*[@class='jscroll-added'])[" + i + "]"));
+            arrayList.add(i - 1, text.getText());
             js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
-            System.out.println(i+"." + ".Paragraf : " + arrayList.get(i-1));
+            System.out.println(i + ". Paragraf : " + arrayList.get(i-1));
         }
         waitAndClose();
     }
