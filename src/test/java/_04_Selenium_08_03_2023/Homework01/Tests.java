@@ -37,27 +37,10 @@ public class Tests extends BaseDriver {
 
             if (i == 0) {
                 firstNumber.sendKeys(String.valueOf(randomNumber1));
-                Action action = actions.
-                        moveToElement(firstNumber).
-                        click().
-                        keyDown(Keys.TAB).
-                        keyUp(Keys.TAB).
-                        sendKeys(Integer.toString(randomNumber2)).
-                        build();
+                Action action = actions.moveToElement(firstNumber).click().keyDown(Keys.TAB).keyUp(Keys.TAB).sendKeys(Integer.toString(randomNumber2)).build();
                 action.perform();
             } else {
-                Action action = actions.
-                        moveToElement(firstNumber).
-                        click().
-                        keyDown(Keys.BACK_SPACE).
-                        keyUp(Keys.BACK_SPACE).
-                        keyDown(Keys.BACK_SPACE).
-                        keyUp(Keys.BACK_SPACE).
-                        sendKeys(Integer.toString(randomNumber1)).
-                        keyDown(Keys.TAB).
-                        keyUp(Keys.TAB).
-                        sendKeys(Integer.toString(randomNumber2)).
-                        build();
+                Action action = actions.moveToElement(firstNumber).click().keyDown(Keys.BACK_SPACE).keyUp(Keys.BACK_SPACE).keyDown(Keys.BACK_SPACE).keyUp(Keys.BACK_SPACE).sendKeys(Integer.toString(randomNumber1)).keyDown(Keys.TAB).keyUp(Keys.TAB).sendKeys(Integer.toString(randomNumber2)).build();
                 action.perform();
             }
 
@@ -104,27 +87,27 @@ public class Tests extends BaseDriver {
 
         driver.get("https://www.youtube.com/");
 
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+        List<WebElement> rejectAll = driver.findElements(By.xpath("//*[@id=\"content\"]/div[2]/div[6]/div[1]/ytd-button-renderer[1]/yt-button-shape/button/yt-touch-feedback-shape/div/div[2]"));
+        if (!rejectAll.isEmpty()) {
+            rejectAll.get(0).click();
+        }
 
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
         Actions actions = new Actions(driver);
 
         WebElement searchBox = driver.findElement(By.xpath("//input[@name='search_query']"));
+        wait.until(ExpectedConditions.visibilityOf(searchBox));
+        searchBox.click();
         searchBox.sendKeys("Selenium");
 
-        Action action = actions.
-                moveToElement(searchBox).
-                click().
-                keyDown(Keys.ENTER).
-                keyUp(Keys.ENTER).
-                build();
+        Action action = actions.moveToElement(searchBox).click().keyDown(Keys.ENTER).keyUp(Keys.ENTER).build();
         action.perform();
-
-        JavascriptExecutor js = (JavascriptExecutor) driver;
 
         List<WebElement> videos = driver.findElements(By.cssSelector(".style-scope ytd-video-renderer"));
 
         while (videos.size() < 80) {
-            js.executeScript("window.scrollBy(0,3000);");
+            js.executeScript("window.scrollBy(0,3000)");
             wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.cssSelector(".style-scope ytd-video-renderer")));
             videos = driver.findElements(By.cssSelector(".style-scope ytd-video-renderer"));
         }

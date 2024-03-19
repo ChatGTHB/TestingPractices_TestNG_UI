@@ -49,7 +49,6 @@ public class TestNG_1 {
 
 
     // enabled
-
     @Test
     public void c_language() {
         System.out.println("C language");
@@ -61,13 +60,11 @@ public class TestNG_1 {
     }
 
     @Test
-
     public void java() {
         System.out.println("JAVA language");
     }
 
     //   assertions
-
     @Test
     public void testCase() {
         String text1 = "Java is a programming language.";
