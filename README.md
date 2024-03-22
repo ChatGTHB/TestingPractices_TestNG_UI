@@ -1,6 +1,4 @@
-# Testing Practices TestNG
-
-## Current TestNG Training Practices
+# Current TestNG Training Practices
 
 
 
