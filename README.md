@@ -1,8 +1,2 @@
-# Testing Exercises
+# Testing Practices TestNG
 
-## HTML
-## Java
-## JUnit
-## Selenium
-## TestNG
-## Cucumber
