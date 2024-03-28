@@ -17,9 +17,10 @@ import java.util.logging.Logger;
 public class BaseDriver {
     public static WebDriver driver; // SingletonDriver method
     public static WebDriverWait wait;
-    public static final org.apache.logging.log4j.Logger logger4j2= LogManager.getLogger();
+    public static final org.apache.logging.log4j.Logger logger4j2 = LogManager.getLogger();
 
-    @BeforeClass
+
+    @BeforeClass(groups = "Smoke")
     public void initialOperations() {  // The condition of this is that it is extends and takes place in the first place.
 
         Logger logger = Logger.getLogger(""); // Get output logs.
@@ -68,15 +69,9 @@ public class BaseDriver {
          */
 
         wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-
-        loginTest();
     }
 
-    private void loginTest() {
-        System.out.println("Login");
-    }
-
-    @AfterClass
+    @AfterClass(groups = "Smoke")
     public static void finishingOperations() {
         Tools.wait(3);
         driver.quit();
