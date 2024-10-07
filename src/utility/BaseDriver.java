@@ -15,14 +15,23 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class BaseDriver {
+    public static final org.apache.logging.log4j.Logger logger4j2 = LogManager.getLogger();
     public static WebDriver driver; // SingletonDriver method
     public static WebDriverWait wait;
-    public static final org.apache.logging.log4j.Logger logger4j2 = LogManager.getLogger();
 
+    @AfterClass(groups = "Smoke")
+    public static void finishingOperations() {
+        Tools.wait(3);
+        driver.quit();
+        /**
+         finishingOperations adında bir metot tanımlanır.
+         Bu metot ile Tools sınıfındaki wait metodu çağrılarak 3 saniye bekler ve
+         ardından driver.quit() metodu kullanılarak WebDriver kapatılır.
+         */
+    }
 
     @BeforeClass(groups = "Smoke")
     public void initialOperations() {  // The condition of this is that it is extends and takes place in the first place.
-
         Logger logger = Logger.getLogger(""); // Get output logs.
         logger.setLevel(Level.SEVERE);              // Show only ERRORs
         /**
@@ -69,17 +78,6 @@ public class BaseDriver {
          */
 
         wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-    }
-
-    @AfterClass(groups = "Smoke")
-    public static void finishingOperations() {
-        Tools.wait(3);
-        driver.quit();
-        /**
-         finishingOperations adında bir metot tanımlanır.
-         Bu metot ile Tools sınıfındaki wait metodu çağrılarak 3 saniye bekler ve
-         ardından driver.quit() metodu kullanılarak WebDriver kapatılır.
-         */
     }
 
     @BeforeMethod
