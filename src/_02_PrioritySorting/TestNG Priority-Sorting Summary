@@ -1,0 +1,21 @@
+
+Konu: TestNG Priority-Sorting
+
+Summary:
+
+TestNG'de test metotlarının çalıştırılma sırası `@Test(priority = x)` ile belirlenir.
+Priority (öncelik) değeri verilen metotlar bu değere göre sıralanır.
+
+1. Priority Atanmış Metotlar:
+   Eğer bir metoda `@Test(priority = x)` şeklinde bir değer atanmışsa, TestNG bu değere göre sıralama yapar.
+   Priority değeri ne kadar küçükse, metot o kadar önce çalıştırılır. Örneğin, `priority = 1`, `priority = 2`'den önce çalışır.
+
+2. Priority Atanmamış Metotlar:
+   Eğer bir metoda priority atanmazsa, bu metot priority atanmış metotlardan önce çalıştırılır.
+   Priority atanmamış metotlar, alfabetik sıraya göre sıralanır.
+
+3. Sıralama Kuralları:
+   - Önce priority atanmamış metotlar çalıştırılır ve bunlar kendi aralarında alfabetik sıralanır.
+   - Daha sonra priority atanmış metotlar çalıştırılır. Priority değeri küçük olan metot önce çalıştırılır.
+
+
