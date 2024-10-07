@@ -1,0 +1,17 @@
+
+
+Konu: TestNG Enable/Disable Annotations
+
+Summary:
+
+TestNG'de test metotlarının çalıştırılmasını kontrol etmek için `enabled` parametresi kullanılır.
+Bu parametre, belirli bir testin devre dışı bırakılmasını veya etkinleştirilmesini sağlar.
+
+1. @Test(enabled = true / false):
+   - Varsayılan olarak her test metodu `enabled = true` olduğu için çalıştırılır.
+   - Eğer bir testi geçici olarak devre dışı bırakmak istiyorsanız, `enabled = false` kullanabilirsiniz.
+   - Devre dışı bırakılan testler çalıştırılmaz ve test raporlarında "skip" edilmiş olarak görünebilir.
+   - Bu yöntem, henüz tamamlanmamış testleri veya geçici olarak göz ardı etmek istediğiniz testleri yönetmek için kullanışlıdır.
+
+Bu annotation, büyük test senaryolarında belirli testleri geçici olarak devre dışı bırakmanız gerektiğinde
+veya henüz tamamlanmamış testleri yönetirken oldukça kullanışlıdır.
