@@ -22,7 +22,7 @@ Hard Assert ve Soft Assert.
    - TestNG'nin SoftAssert sınıfında yer alır.
    - Örneğin: softAssert.assertEquals(actual, expected);
 
-TestNG'de Sık Kullanılan Assertions:
+TestNG'de Sık Kullanılan Assertionlar:
 
 - Assert.assertEquals(): İki değerin eşit olup olmadığını kontrol eder.
 - Assert.assertNotEquals(): İki değerin eşit olmadığını doğrular.
@@ -32,8 +32,8 @@ TestNG'de Sık Kullanılan Assertions:
 - Assert.assertNotNull(): Verilen değerin null olmadığını kontrol eder.
 
 SoftAssert Kullanımı:
-SoftAssert ile tüm assertions test bitimine kadar yürütülür ve ardından sonuçlar raporlanır.
+SoftAssert ile tüm assertionlar test bitimine kadar yürütülür ve ardından sonuçlar raporlanır.
 Soft assertleri toplu olarak değerlendirmek için assertAll() metodu çağrılmalıdır.
 
-Kısacası, assertions testlerin doğruluğunu garanti altına almak için kullanılır.
+Kısacası, assertionlar testlerin doğruluğunu garanti altına almak için kullanılır.
 Hard Assert test başarısız olduğunda testi durdururken, Soft Assert testin devam etmesine izin verir.

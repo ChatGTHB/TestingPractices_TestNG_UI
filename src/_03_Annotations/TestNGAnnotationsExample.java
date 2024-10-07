@@ -12,60 +12,70 @@ public class TestNGAnnotationsExample {
                   * @BeforeMethod
                             * @Test
                             * @Test
-                  * @AfterMethod
+                 * @AfterMethod
                  * @AfterClass
              * @AfterGroups
          * @AfterTest
      * @AfterSuit
      */
 
-
+    // Test suite çalışmadan önce çalışır
     @BeforeSuite
-     public void BeforeSuite(){
-        System.out.println("BeforeSuite calisti");
+    public void beforeSuite() {
+        System.out.println("Before Suite çalıştı.");
     }
+
+    // Test grubundan önce çalışır
     @BeforeTest
-    public void BeforeTest(){
-        System.out.println("BeforeTest calisti");
+    public void beforeTest() {
+        System.out.println("Before Test çalıştı.");
     }
-    @BeforeGroups
-    public void BeforeGroups(){
-        System.out.println("BeforeGroups calisti");
-    }
+
+    // Sınıftan önce çalışır
     @BeforeClass
-    public void BeforeClass(){
-        System.out.println("BeforeClass calisti");
+    public void beforeClass() {
+        System.out.println("Before Class çalıştı.");
     }
+
+    // Her test metodundan önce çalışır
     @BeforeMethod
-    public void BeforeMethod(){
-        System.out.println("BeforeMethod calisti");
+    public void beforeMethod() {
+        System.out.println("Before Method çalıştı.");
     }
+
+    // İlk test methodu
     @Test
-    public void Test1(){
-        System.out.println("Test1 calisti");
+    public void testMethodOne() {
+        System.out.println("Test Method One çalıştı.");
     }
+
+    // İkinci test methodu
     @Test
-    public void Test2(){
-        System.out.println("Test2 calisti");
+    public void testMethodTwo() {
+        System.out.println("Test Method Two çalıştı.");
     }
+
+    // Her test metodundan sonra çalışır
     @AfterMethod
-    public void AfterMethod(){
-        System.out.println("AfterMethod calisti");
+    public void afterMethod() {
+        System.out.println("After Method çalıştı.");
     }
+
+    // Sınıftan sonra çalışır
     @AfterClass
-    public void AfterClass(){
-        System.out.println("AfterClass calisti");
+    public void afterClass() {
+        System.out.println("After Class çalıştı.");
     }
-    @AfterGroups
-    public void AfterGroups(){
-        System.out.println("AfterGroups calisti");
-    }
+
+    // Test grubundan sonra çalışır
     @AfterTest
-    public void AfterTest(){
-        System.out.println("AfterTest calisti");
+    public void afterTest() {
+        System.out.println("After Test çalıştı.");
     }
+
+    // Test suite tamamlandıktan sonra çalışır
     @AfterSuite
-    public void AfterSuite(){
-        System.out.println("AfterSuite calisti");
+    public void afterSuite() {
+        System.out.println("After Suite çalıştı.");
     }
 }
