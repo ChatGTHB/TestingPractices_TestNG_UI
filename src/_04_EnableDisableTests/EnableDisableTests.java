@@ -1,6 +1,7 @@
 package _04_EnableDisableTests;
 
 import org.testng.Assert;
+import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 
 public class EnableDisableTests {
@@ -10,8 +11,8 @@ public class EnableDisableTests {
     public void testCaseDisabled() {
         String str1 = "TestNG";
         String str2 = "Selenium";
-        Assert.assertEquals(str1, str2, "Strings are not equal!");
-        System.out.println("Bu metot çalıştırılmadı.");
+        Assert.assertEquals(str1, str2, "String'ler eşit değil! TestNG ve Selenium farklıdır.");
+        System.out.println("Bu metot çalıştırılmadı çünkü `enabled = false` ile devre dışı bırakıldı.");
     }
 
     // Bu metot çalıştırılacak çünkü varsayılan olarak `enabled = true`.
@@ -19,7 +20,7 @@ public class EnableDisableTests {
     public void testCaseEnabled() {
         String str1 = "Selenium";
         String str2 = "Selenium";
-        Assert.assertEquals(str1, str2, "Strings are equal!");
+        Assert.assertEquals(str1, str2, "String'ler eşit olmalı! İkisi de Selenium'dur.");
         System.out.println("Enabled test metodu çalıştı.");
     }
 
@@ -28,17 +29,17 @@ public class EnableDisableTests {
     public void testCaseOne() {
         String str1 = "Java";
         String str2 = "Java";
-        Assert.assertEquals(str1, str2, "Strings are equal!");
+        Assert.assertEquals(str1, str2, "String'ler eşit olmalı! İkisi de Java'dır.");
         System.out.println("Test case one başarıyla çalıştı.");
     }
 
-    // Bu metot yine `enabled = false` ile devre dışı bırakıldı.
+    // Bu metot `enabled = false` ile devre dışı bırakıldı.
     @Test(priority = 2, enabled = false)
     public void testCaseTwo() {
         String str1 = "TestNG";
         String str2 = "JUnit";
-        Assert.assertEquals(str1, str2, "Strings are not equal!");
-        System.out.println("Bu metot çalıştırılmadı.");
+        Assert.assertEquals(str1, str2, "String'ler eşit değil! TestNG ve JUnit farklıdır.");
+        System.out.println("Bu metot çalıştırılmadı çünkü `enabled = false` ile devre dışı bırakıldı.");
     }
 
     // Normal çalışan bir test metodu.
@@ -46,7 +47,17 @@ public class EnableDisableTests {
     public void testCaseThree() {
         String str1 = "Selenium WebDriver";
         String str2 = "Selenium WebDriver";
-        Assert.assertEquals(str1, str2, "Strings are equal!");
+        Assert.assertEquals(str1, str2, "String'ler eşit olmalı! İkisi de Selenium WebDriver'dır.");
         System.out.println("Test case three başarıyla çalıştı.");
+    }
+
+    // @Ignore kullanılarak devre dışı bırakılan bir test metodu.
+    @Ignore
+    @Test
+    public void testCaseIgnored() {
+        String str1 = "TestNG";
+        String str2 = "Selenium";
+        Assert.assertEquals(str1, str2, "String'ler eşit değil! TestNG ve Selenium farklıdır.");
+        System.out.println("Bu metot çalıştırılmadı çünkü `@Ignore` annotation'ı ile devre dışı bırakıldı.");
     }
 }
