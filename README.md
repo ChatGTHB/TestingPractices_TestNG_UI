@@ -38,12 +38,32 @@ Welcome to the **TestingPractices_TestNG_UI** repository! This project is design
         - `commons-io:commons-io:2.11.0`
         - `org.apache.logging.log4j:log4j-api:2.20.0`
         - `org.apache.logging.log4j:log4j-core:2.20.0`
+        - `org.slf4j:slf4j-nop:1.7.30`
 
 ## ⚙️ Usage
-1. Open the project in IntelliJ IDEA.
-2. Configure `testng.xml` for your test suite execution.
-3. Run the test cases using the TestNG plugin integrated with IntelliJ IDEA.
-4. Customize the test methods and configurations as per your test requirements.
+
+Ensure that you have the necessary dependencies installed and navigate to the `src` directory to set up and execute the test cases.
+
+### 1. Running from XML File
+Run your tests from the `testng.xml` file by following these steps:
+
+```bash
+# From IntelliJ IDEA or Eclipse
+Right-click and select 'Run testng.xml'.
+
+# To run from command line with Maven
+mvn test -DsuiteXmlFile=testng.xml
+```
+
+### 2. Running Test Classes Directly
+You can directly run test classes annotated with TestNG:
+
+```bash
+# Right-click on the class in IntelliJ IDEA and select 'Run ClassName'.
+
+# To run all test classes with Maven
+mvn test
+```
 
 ## ✨ Features
 - **Sorting**: Organize tests in a specific order.
@@ -69,6 +89,7 @@ Welcome to the **TestingPractices_TestNG_UI** repository! This project is design
 | Selenium WebDriver  | 4.25.0  | [Selenium](https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java/4.25.0)                                                                                              |
 | Log4j2              | 2.20.0  | [Log4j2 API](https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-api/2.20.0), [Log4j2 Core](https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core/2.20.0) |
 | Commons IO          | 2.11.0  | [Commons IO](https://mvnrepository.com/artifact/commons-io/commons-io/2.11.0)                                                                                                            |
+| SLF4J NOP           | 1.7.30  | [SLF4J NOP](https://mvnrepository.com/artifact/org.slf4j/slf4j-nop/1.7.30)                                                                                                                |                                                                                                       |
 
 ## 🔧 Configuration
 Configuration details can be found in the `testng.xml` file and other relevant configuration files within the project.
