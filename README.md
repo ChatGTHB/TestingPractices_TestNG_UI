@@ -29,7 +29,6 @@ To install TestNGCurrent, clone the repository to your local machine:
 ```bash
 git clone https://github.com/ChatGTHB/TestingPractices_TestNG_UI
 ```
-
 ### Importing into IntelliJ IDEA from VCS
 1. Open IntelliJ IDEA.
 2. Go to `File` > `New` > `Project from Version Control`.
@@ -135,7 +134,6 @@ This project includes several examples designed to demonstrate TestNG's capabili
 
 ## 🛠️ Troubleshooting
 If you encounter any issues:
-
 - Ensure that TestNG and Selenium WebDriver are properly installed and operational.
 - Verify that your Java environment is correctly set up for TestNG and other dependencies.
 - Check that your IntelliJ IDEA and other development tools are configured according to the project's requirements.
