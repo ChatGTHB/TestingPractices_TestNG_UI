@@ -24,24 +24,34 @@ Welcome to the **TestingPractices_TestNG_UI** repository! This project is design
 - [📜 License](#📜-license)
 
 ## 📥 Installation
+### Cloning the Repository
+To install TestNGCurrent, clone the repository to your local machine:
+```bash
+git clone https://github.com/ChatGTHB/TestingPractices_TestNG_UI
+```
+
+### Importing into IntelliJ IDEA from VCS
 1. Open IntelliJ IDEA.
-2. Select **File > New > Project from Version Control**.
-3. Enter the repository URL: `https://github.com/ChatGTHB/TestingPractices_TestNG_UI.git` and click **Clone**.
-4. Ensure you have JDK 11+ installed on your system:
-    - Go to **File > Project Structure > Project** and ensure the Project SDK is set to the correct JDK version.
-5. Add the required dependencies using Maven:
-    - Go to **File > Project Structure > Libraries**.
-    - Click the **+** icon, select **From Maven**.
-    - Add the following Maven artifacts:
-        - `org.testng:testng:7.9.0`
-        - `org.seleniumhq.selenium:selenium-java:4.25.0`
-        - `commons-io:commons-io:2.11.0`
-        - `org.apache.logging.log4j:log4j-api:2.20.0`
-        - `org.apache.logging.log4j:log4j-core:2.20.0`
-        - `org.slf4j:slf4j-nop:1.7.30`
+2. Go to `File` > `New` > `Project from Version Control`.
+3. In the dialog, select `Git` and enter the repository URL: `https://github.com/ChatGTHB/TestingPractices_TestNG_UI`.
+4. Click `Clone`.
+
+### Adding Dependencies from Maven
+1. Open IntelliJ IDEA.
+2. Navigate to `File` > `Project Structure` > `Libraries`.
+3. Click on the `+` icon and select `From Maven`.
+4. In the dialog, search for the necessary libraries using the Maven coordinates:
+    - `org.apache.logging.log4j:log4j-api:2.20.0`
+    - `org.apache.logging.log4j:log4j-core:2.20.0`
+    - `commons-io:commons-io:2.11.0`
+    - `org.seleniumhq.selenium:selenium-java:4.25.0`
+    - `org.slf4j:slf4j-nop:1.7.30`
+    - `org.testng:testng:7.9.0`
+5. Click `OK` to add the selected libraries.
+
+For each library, you can also use a higher version if available.
 
 ## ⚙️ Usage
-
 Ensure that you have the necessary dependencies installed and navigate to the `src` directory to set up and execute the test cases.
 
 ### 1. Running from XML File
@@ -92,7 +102,7 @@ mvn test
 | SLF4J NOP           | 1.7.30  | [SLF4J NOP](https://mvnrepository.com/artifact/org.slf4j/slf4j-nop/1.7.30)                                                                                                                |                                                                                                       |
 
 ## 🔧 Configuration
-Configuration details can be found in the `testng.xml` file and other relevant configuration files within the project.
+Configuration details can be found in the `testng.xml` file and other relevant configuration files within the project. Log4j2 configuration is set up in the `log4j2.xml` file to provide detailed logging.
 
 ### Log4j2 Integration
 The project uses Log4j2 for logging purposes. Ensure the necessary dependencies are included in your project and the `log4j2.xml` file is correctly configured for detailed logging. Logging is crucial for tracking and debugging test execution; `BaseDriver` utilizes Log4j2 to log test methods' start, end, and results.
