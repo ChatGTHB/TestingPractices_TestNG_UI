@@ -52,6 +52,7 @@ public class TutorialsNinjaGroupDependencyTest extends BaseDriver {
         // "My Account" -> "Register" menüsüne tıklayın
         WebElement myAccountMenu = driver.findElement(By.xpath("//span[text()='My Account']"));
         myAccountMenu.click();
+
         WebElement registerLink = driver.findElement(By.linkText("Register"));
         registerLink.click();
 

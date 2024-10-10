@@ -11,34 +11,34 @@ import java.util.Random;
 
 public class TutorialsNinjaMethodDependencyTest extends BaseDriver {
 
+    /**
+     Task: Kullanıcı Kayıt ve Login İşlemi (Yöntem Bağımlılığı)
+
+     Senaryo 1: Kullanıcı Kayıt İşlemi
+
+     1. Anasayfaya gidin: http://tutorialsninja.com/demo/
+     2. "My Account" menüsüne tıklayın.
+     3. Açılan menüden "Register" bağlantısına tıklayın.
+     4. Kayıt formunda şu alanları doldurun:
+     - First Name, Last Name, Email, Telephone, Password, Confirm Password
+     5. "Privacy Policy" kutucuğunu işaretleyin ve "Continue" butonuna tıklayın.
+     6. Kayıt işleminin başarılı olduğunu doğrulayın (Başarı mesajını kontrol edin).
+     7. "Logout" yaparak oturumu kapatın.
+
+     Senaryo 2: Kullanıcı Giriş İşlemi
+
+     1. Anasayfaya geri dönün.
+     2. "My Account" menüsüne tıklayın ve "Login" bağlantısına tıklayın.
+     3. Kayıt sırasında kullandığınız email ve şifre ile giriş yapın.
+     4. Giriş işleminin başarılı olduğunu doğrulayın (Logout butonunun görünür olduğunu kontrol edin).
+     */
+
     // Random objesi
     Random random = new Random();
 
     // Rastgele email ve şifre oluşturma
     String generatedEmail = "user_" + random.nextInt(10000) + "@testmail.com";
     String generatedPassword = "password" + random.nextInt(10000);
-
-    /**
-        Task: Kullanıcı Kayıt ve Login İşlemi (Yöntem Bağımlılığı)
-
-        Senaryo 1: Kullanıcı Kayıt İşlemi
-
-        1. Anasayfaya gidin: http://tutorialsninja.com/demo/
-        2. "My Account" menüsüne tıklayın.
-        3. Açılan menüden "Register" bağlantısına tıklayın.
-        4. Kayıt formunda şu alanları doldurun:
-           - First Name, Last Name, Email, Telephone, Password, Confirm Password
-        5. "Privacy Policy" kutucuğunu işaretleyin ve "Continue" butonuna tıklayın.
-        6. Kayıt işleminin başarılı olduğunu doğrulayın (Başarı mesajını kontrol edin).
-        7. "Logout" yaparak oturumu kapatın.
-
-        Senaryo 2: Kullanıcı Giriş İşlemi
-
-        1. Anasayfaya geri dönün.
-        2. "My Account" menüsüne tıklayın ve "Login" bağlantısına tıklayın.
-        3. Kayıt sırasında kullandığınız email ve şifre ile giriş yapın.
-        4. Giriş işleminin başarılı olduğunu doğrulayın (Logout butonunun görünür olduğunu kontrol edin).
-     */
 
     @Test
     public void registerTest() {
@@ -48,6 +48,7 @@ public class TutorialsNinjaMethodDependencyTest extends BaseDriver {
         // 2. "My Account" -> "Register" menüsüne tıklayın
         WebElement myAccountMenu = driver.findElement(By.xpath("//span[text()='My Account']"));
         myAccountMenu.click();
+
         WebElement registerLink = driver.findElement(By.linkText("Register"));
         registerLink.click();
 
@@ -73,6 +74,7 @@ public class TutorialsNinjaMethodDependencyTest extends BaseDriver {
         // 5. "Privacy Policy" kutucuğunu işaretleyin ve "Continue" butonuna tıklayın
         WebElement privacyPolicyCheckbox = driver.findElement(By.name("agree"));
         privacyPolicyCheckbox.click();
+
         WebElement continueButton = driver.findElement(By.cssSelector("input.btn.btn-primary"));
         continueButton.click();
 
@@ -84,6 +86,7 @@ public class TutorialsNinjaMethodDependencyTest extends BaseDriver {
         // 7. "Logout" yaparak oturumu kapatın
         WebElement myAccountDropdown = driver.findElement(By.xpath("//span[text()='My Account']"));
         myAccountDropdown.click();
+
         WebElement logoutLink = driver.findElement(By.linkText("Logout"));
         logoutLink.click();
     }
@@ -96,6 +99,7 @@ public class TutorialsNinjaMethodDependencyTest extends BaseDriver {
         // 2. "My Account" -> "Login" menüsüne tıklayın
         WebElement myAccountMenu = driver.findElement(By.xpath("//span[text()='My Account']"));
         myAccountMenu.click();
+
         WebElement loginLink = driver.findElement(By.linkText("Login"));
         loginLink.click();
 
