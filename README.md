@@ -54,14 +54,14 @@ For each library, you can also use a higher version if available.
 Ensure that you have the necessary dependencies installed and navigate to the `src` directory to set up and execute the test cases.
 
 ### 1. Running from XML File
-Run your tests from the `testng.xml` file by following these steps:
+Run your tests from any TestNG XML file by following these steps:
 
 ```bash
 # From IntelliJ IDEA or Eclipse
-Right-click and select 'Run testng.xml'.
+Right-click on any XML file (e.g., 'testng.xml') and select 'Run'.
 
 # To run from command line with Maven
-mvn test -DsuiteXmlFile=testng.xml
+mvn test -DsuiteXmlFile=your-test-suite.xml
 ```
 
 ### 2. Running Test Classes Directly
