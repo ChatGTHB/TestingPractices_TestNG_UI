@@ -19,7 +19,7 @@ public class BaseDriver {
     public static WebDriver driver; // SingletonDriver method
     public static WebDriverWait wait;
 
-    @AfterClass(groups = "Smoke")
+    @AfterClass
     public static void finishingOperations() {
         Tools.wait(3);
         driver.quit();
@@ -30,7 +30,7 @@ public class BaseDriver {
          */
     }
 
-    @BeforeClass(groups = "Smoke")
+    @BeforeClass
     public void initialOperations() {  // The condition of this is that it is extends and takes place in the first place.
         Logger logger = Logger.getLogger(""); // Get output logs.
         logger.setLevel(Level.SEVERE);              // Show only ERRORs
