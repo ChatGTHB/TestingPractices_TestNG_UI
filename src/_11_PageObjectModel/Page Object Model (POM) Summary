@@ -1,43 +1,45 @@
 
-
-Konu: Data Providers ile Testler
+Konu: Page Object Model (POM)
 
 Summary:
 
-TestNG'de "Data Provider", aynı testi birden fazla veri kümesi ile çalıştırmak için kullanılır.
-Bu özellik, aynı test metodunun farklı veri setleri ile tekrar tekrar çalıştırılmasını sağlar.
-Parametreli testlerin aksine, Data Providers ile her test çalışmasında dinamik olarak farklı veri kümesi kullanılabilir.
+Page Object Model (POM), yazılım testlerinde kullanılan bir tasarım deseni olup,
+her web sayfası veya sayfanın belirli bölümleri için ayrı sınıflar oluşturarak testlerin
+düzenlenmesini ve bakımını kolaylaştırır. POM, testlerin daha temiz, tekrar kullanılabilir
+ve sürdürülebilir hale gelmesini sağlar.
 
-Data Providers:
-- `@DataProvider` anotasyonu ile tanımlanır.
-- Farklı veri kümeleri sağlayarak aynı testi tekrar tekrar çalıştırır.
-- Her bir veri kümesi, bir test metoduna parametre olarak iletilir.
-- Test metodu, `@Test(dataProvider = "dataProviderName")` ile Data Provider'a bağlanır.
+Page Object Model ile yapılan işlemler:
 
-Kullanımı:
+1. Page Object (Sayfa Nesnesi) Tanımlama:
+   - Her web sayfası veya sayfanın belirli bölümleri için bir sınıf oluşturulur. Bu sınıf,
+     web öğelerini ve bu öğeler üzerinde yapılacak işlemleri içerir.
+   - Örneğin:
+     public class LoginPage {
+         @FindBy(id = "username") WebElement usernameInput;
+         @FindBy(id = "password") WebElement passwordInput;
 
-1. @DataProvider ile birden fazla veri kümesi tanımlanır:
+         public void setUsername(String username) {
+             usernameInput.sendKeys(username);
+         }
+     }
 
-@DataProvider(name = "loginCredentials")
-public Object[][] loginCredentials() {
-    return new Object[][] {
-        {"user1@example.com", "password1"},
-        {"user2@example.com", "password2"},
-        {"user3@example.com", "password3"}
-    };
-}
+2. Test Kodunda Sayfa Nesnelerini Kullanma:
+   - Test sınıfları, oluşturulan sayfa nesnelerini kullanarak test işlemlerini gerçekleştirir.
+     Sayfa işlemleri bu nesneler aracılığıyla yapılır.
+   - Örneğin:
+     LoginPage loginPage = new LoginPage(driver);
+     loginPage.setUsername("standard_user");
 
-2. @Test(dataProvider = "loginCredentials") ile veri sağlayıcısı belirtilir ve her veri seti ile test tekrar çalıştırılır:
+3. Kodun Bakımı ve Yeniden Kullanılabilirliği:
+   - POM, her sayfanın işlemlerini merkezi bir sınıfta topladığı için, sayfa üzerinde yapılan
+     değişiklikler sadece o sınıfı etkiler. Test kodlarında herhangi bir düzenlemeye gerek kalmaz.
+   - Aynı sayfa işlemleri farklı testlerde tekrar kullanılabilir.
 
-@Test(dataProvider = "loginCredentials")
-public void loginTest(String username, String password) {
-    // Login işlemi yapılır
-    System.out.println("Login Test for: " + username);
-}
+4. Testin Temizlenmesi ve Anlaşılabilirliği:
+   - Test mantığı ve sayfa işlemleri birbirinden ayrılır, bu da kodun daha temiz ve anlaşılır
+     olmasını sağlar. Test kodu yalnızca doğrulama ve işlem adımlarına odaklanır.
 
-Bu örnek, aynı login testinin farklı kullanıcı adı ve şifrelerle nasıl çalıştırıldığını gösterir.
-
-Kısacası, Data Providers, testlerin veri tabanlı senaryolarla çalıştırılmasını sağlar
-ve testlerin farklı veri kümeleriyle tekrarlanmasını kolaylaştırır.
-Parametrelerden farklı olarak, test verisi dinamik ve esnek bir şekilde sağlanır.
-
+Sonuç:
+Page Object Model, testlerin düzenlenmesini ve bakımını kolaylaştırarak, kod tekrarını
+azaltır ve büyük projelerde daha sürdürülebilir bir test yapısı sağlar. POM sayesinde,
+sayfa işlemleri ile test mantığı ayrılır, böylece kod daha modüler hale gelir.
