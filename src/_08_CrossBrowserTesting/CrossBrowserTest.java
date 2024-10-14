@@ -5,24 +5,24 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import utility.BaseDriver;
 import utility.BaseDriverParameter;
 
 import java.util.List;
 
 public class CrossBrowserTest extends BaseDriverParameter {
-    /**
-     Task: Cross Browser Testing - Google Arama Testi
 
-     1. Google'ın anasayfasına gidin. (https://www.google.com)
-     2. Çerez izni penceresindeki "Tümünü reddet" butonunu bulun ve tıklayın (varsa).
-     3. Google başlığını doğrulayın.
-     4. Arama kutusuna "Cross Browser Testing" yazın ve arama yapın.
-     5. Arama sonuçlarının yüklendiğini doğrulayın.
+    /**
+        Task: Cross Browser Testing - Google Arama Testi
+
+        1. Google'ın anasayfasına gidin.
+        2. Çerez izni penceresindeki "Tümünü reddet" butonunu bulun ve tıklayın (varsa).
+        3. Google başlığını doğrulayın.
+        4. Arama kutusuna "Cross Browser Testing" yazın ve arama yapın.
+        5. Arama sonuçlarının yüklendiğini doğrulayın.
      */
 
     @Test
-    public void crossBrowserTest(){
+    public void crossBrowserTest() {
         // 1. Google'a gidin
         driver.get("https://www.google.com");
 
@@ -34,16 +34,16 @@ public class CrossBrowserTest extends BaseDriverParameter {
         }
 
         // 3. Google başlığını doğrulayın
-        String expectedTitle="Google";
-        Assert.assertEquals(driver.getTitle(),expectedTitle,"Baslik dogrulamasi basarisiz oldu!");
+        String expectedTitle = "Google";
+        Assert.assertEquals(driver.getTitle(), expectedTitle, "Başlık doğrulaması başarısız oldu!");
 
-        // 4. Arama kutusuna "Cross Browser Testing" yazın ve arama yapın.
-        WebElement searchInput= driver.findElement(By.name("q"));
+        // 4. Arama kutusuna bir şeyler yazın ve doğrulayın
+        WebElement searchInput = driver.findElement(By.name("q"));
         searchInput.sendKeys("Cross Browser Testing");
         searchInput.submit();
 
-        // 5. Arama sonuçlarının yüklendiğini doğrulayın.
-        WebElement searchResult=wait.until(ExpectedConditions.presenceOfElementLocated(By.id("search")));
-        Assert.assertTrue(searchResult.isDisplayed(),"Arama sonucu sayfasi gorunmedi!");
+        // 5. Arama sonuç sayfasının yüklendiğini doğrulayın
+        WebElement searchResult = wait.until(ExpectedConditions.presenceOfElementLocated(By.id("search")));
+        Assert.assertTrue(searchResult.isDisplayed(), "Arama sonucu sayfası görünmedi!");
     }
 }
