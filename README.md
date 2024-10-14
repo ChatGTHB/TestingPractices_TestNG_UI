@@ -58,7 +58,7 @@ Run your tests from any TestNG XML file by following these steps:
 
 ```bash
 # From IntelliJ IDEA or Eclipse
-Right-click on any XML file (e.g., 'testng.xml') and select 'Run'.
+Right-click on any XML file (e.g., 'cross-browser-test.xml') and select 'Run'.
 
 # To run from command line with Maven
 mvn test -DsuiteXmlFile=your-test-suite.xml
