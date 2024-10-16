@@ -7,7 +7,7 @@ TestNG'de "Data Provider", aynı testi birden fazla veri kümesi ile çalıştı
 Bu özellik, aynı test metodunun farklı veri setleri ile tekrar tekrar çalıştırılmasını sağlar.
 Parametreli testlerin aksine, Data Providers ile her test çalışmasında dinamik olarak farklı veri kümesi kullanılabilir.
 
-Data Providers:
+Data Provider:
 - `@DataProvider` anotasyonu ile tanımlanır.
 - Farklı veri kümeleri sağlayarak aynı testi tekrar tekrar çalıştırır.
 - Her bir veri kümesi, bir test metoduna parametre olarak iletilir.
