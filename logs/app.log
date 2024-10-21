@@ -1,0 +1,179 @@
+2024-10-11 02:54:37.312 INFO  Test method has started.
+2024-10-11 02:54:44.503 INFO  registerTest test method has finished. -->Passed
+2024-10-11 02:54:44.513 INFO  Test method has started.
+2024-10-11 02:54:46.369 INFO  loginTest test method has finished. -->Passed
+2024-10-11 02:54:46.372 INFO  Test method has started.
+2024-10-11 02:54:47.626 INFO  updateAccountTest test method has finished. -->Passed
+2024-10-11 02:54:47.627 INFO  Test method has started.
+2024-10-11 02:54:48.281 INFO  logoutTest test method has finished. -->Passed
+2024-10-11 02:57:45.865 INFO  Test başladı: logTest()
+2024-10-11 02:57:45.868 INFO  Test başarılı: Sonuç = 8
+2024-10-11 02:57:45.868 INFO  Test bitti: logTest()
+2024-10-11 02:58:10.778 INFO  Test başladı: logTest()
+2024-10-11 02:58:10.785 INFO  Test başarılı: Sonuç = 8
+2024-10-11 02:58:10.785 INFO  Test bitti: logTest()
+2024-10-12 00:23:30.124 INFO  Test method has started.
+2024-10-12 00:24:00.190 INFO  registerTest test method has finished. -->Failed
+2024-10-12 00:24:04.709 INFO  Test method has started.
+2024-10-12 00:24:21.230 INFO  loginTest test method has finished. -->Failed
+2024-10-12 00:26:51.246 INFO  Test method has started.
+2024-10-12 00:27:21.333 INFO  registerTest test method has finished. -->Failed
+2024-10-12 11:54:27.563 INFO  Test method has started.
+2024-10-12 11:54:29.793 INFO  googleSearch test method has finished. -->Passed
+2024-10-12 11:54:52.676 INFO  Test method has started.
+2024-10-12 11:54:54.404 INFO  googleSearch test method has finished. -->Passed
+2024-10-12 11:55:46.913 INFO  Test method has started.
+2024-10-12 11:56:02.839 INFO  registerTest test method has finished. -->Failed
+2024-10-12 11:56:06.877 INFO  Test method has started.
+2024-10-12 11:56:08.253 INFO  loginTest test method has finished. -->Failed
+2024-10-12 12:11:38.138 INFO  Test method has started.
+2024-10-12 12:12:09.199 INFO  loginTest test method has finished. -->Passed
+2024-10-12 12:12:09.203 INFO  Test method has started.
+2024-10-12 12:12:09.552 INFO  logoutTest test method has finished. -->Passed
+2024-10-12 12:19:24.876 INFO  Test method has started.
+2024-10-12 12:19:56.275 INFO  registerTest test method has finished. -->Failed
+2024-10-12 12:21:23.355 INFO  Test method has started.
+2024-10-12 12:21:54.654 INFO  registerTest test method has finished. -->Failed
+2024-10-12 15:36:36.115 INFO  Test method has started.
+2024-10-12 15:36:37.303 INFO  loginTest test method has finished. -->Passed
+2024-10-12 15:36:37.308 INFO  Test method has started.
+2024-10-12 15:36:37.467 INFO  addProductToCartTest test method has finished. -->Passed
+2024-10-12 15:36:37.470 INFO  Test method has started.
+2024-10-12 15:36:37.703 INFO  logoutTest test method has finished. -->Passed
+2024-10-12 15:37:07.716 INFO  Test method has started.
+2024-10-12 15:37:08.679 INFO  loginTest test method has finished. -->Passed
+2024-10-12 15:37:08.685 INFO  Test method has started.
+2024-10-12 15:37:08.833 INFO  addProductToCartTest test method has finished. -->Passed
+2024-10-12 15:37:08.834 INFO  Test method has started.
+2024-10-12 15:37:09.064 INFO  logoutTest test method has finished. -->Passed
+2024-10-12 15:37:20.781 INFO  Test method has started.
+2024-10-12 15:37:29.516 INFO  loginTest test method has finished. -->Failed
+2024-10-12 15:40:28.515 INFO  Test method has started.
+2024-10-12 15:40:48.424 INFO  registerTest test method has finished. -->Failed
+2024-10-12 15:44:17.767 INFO  Test method has started.
+2024-10-12 15:44:18.695 INFO  loginTest test method has finished. -->Passed
+2024-10-12 15:44:18.701 INFO  Test method has started.
+2024-10-12 15:44:18.801 INFO  addProductToCartTest test method has finished. -->Passed
+2024-10-12 15:44:18.802 INFO  Test method has started.
+2024-10-12 15:44:19.091 INFO  logoutTest test method has finished. -->Passed
+2024-10-12 15:46:09.662 INFO  Test method has started.
+2024-10-12 15:46:35.890 INFO  registerTest test method has finished. -->Failed
+2024-10-12 15:47:40.551 INFO  Test method has started.
+2024-10-12 15:47:41.793 INFO  loginTest test method has finished. -->Passed
+2024-10-12 15:47:41.803 INFO  Test method has started.
+2024-10-12 15:47:42.008 INFO  addProductToCartTest test method has finished. -->Passed
+2024-10-12 15:47:42.011 INFO  Test method has started.
+2024-10-12 15:47:42.609 INFO  checkoutTest test method has finished. -->Failed
+2024-10-12 15:48:51.115 INFO  Test method has started.
+2024-10-12 15:48:52.568 INFO  loginTest test method has finished. -->Passed
+2024-10-12 15:48:52.579 INFO  Test method has started.
+2024-10-12 15:48:52.806 INFO  addProductToCartTest test method has finished. -->Passed
+2024-10-12 15:48:52.810 INFO  Test method has started.
+2024-10-12 15:48:53.506 INFO  checkoutTest test method has finished. -->Failed
+2024-10-12 15:49:32.728 INFO  Test method has started.
+2024-10-12 15:49:33.907 INFO  loginTest test method has finished. -->Passed
+2024-10-12 15:49:33.918 INFO  Test method has started.
+2024-10-12 15:49:34.143 INFO  addProductToCartTest test method has finished. -->Passed
+2024-10-12 15:49:34.146 INFO  Test method has started.
+2024-10-12 15:49:34.825 INFO  checkoutTest test method has finished. -->Passed
+2024-10-12 15:49:34.829 INFO  Test method has started.
+2024-10-12 15:49:35.112 INFO  logoutTest test method has finished. -->Passed
+2024-10-12 15:56:58.383 INFO  Test method has started.
+2024-10-12 15:56:59.283 INFO  loginTest test method has finished. -->Passed
+2024-10-12 15:56:59.289 INFO  Test method has started.
+2024-10-12 15:56:59.384 INFO  addProductToCartTest test method has finished. -->Passed
+2024-10-12 15:56:59.386 INFO  Test method has started.
+2024-10-12 15:56:59.788 INFO  checkoutTest test method has finished. -->Passed
+2024-10-12 15:56:59.791 INFO  Test method has started.
+2024-10-12 15:56:59.979 INFO  logoutTest test method has finished. -->Passed
+2024-10-12 16:01:07.644 INFO  Test method has started.
+2024-10-12 16:01:13.573 INFO  registerTest test method has finished. -->Failed
+2024-10-14 17:02:46.630 INFO  Test method has started.
+2024-10-14 17:02:54.447 INFO  registerTest test method has finished. -->Passed
+2024-10-14 17:02:54.514 INFO  Test method has started.
+2024-10-14 17:02:57.513 INFO  loginTest test method has finished. -->Passed
+2024-10-14 17:02:57.516 INFO  Test method has started.
+2024-10-14 17:02:59.166 INFO  updateAccountTest test method has finished. -->Passed
+2024-10-14 17:02:59.168 INFO  Test method has started.
+2024-10-14 17:03:00.155 INFO  logoutTest test method has finished. -->Passed
+2024-10-14 17:24:19.106 INFO  Test method has started.
+2024-10-14 17:24:25.633 INFO  crossBrowserTest test method has finished. -->Passed
+2024-10-14 17:34:16.342 INFO  Test Method has started.
+2024-10-14 17:34:23.185 INFO  crossBrowserTest test method has finished. --> Passed
+2024-10-14 17:34:56.176 INFO  Test Method has started.
+2024-10-14 17:35:00.795 INFO  crossBrowserTest test method has finished. --> Passed
+2024-10-14 17:38:15.048 INFO  Test Method has started.
+2024-10-14 17:38:25.024 INFO  Test Method has started.
+2024-10-14 17:38:25.681 INFO  crossBrowserTest test method has finished. --> Passed
+2024-10-14 17:38:34.164 INFO  crossBrowserTest test method has finished. --> Passed
+2024-10-14 17:38:38.096 INFO  Test Method has started.
+2024-10-14 17:38:42.692 INFO  crossBrowserTest test method has finished. --> Passed
+2024-10-16 17:12:40.060 INFO  Test method has started.
+2024-10-16 17:12:42.479 INFO  loginWithDataProvider test method has finished. -->Passed
+2024-10-16 17:37:23.316 INFO  Test method has started.
+2024-10-16 17:37:27.648 INFO  loginWithDataProvider test method has finished. -->Passed
+2024-10-16 17:37:27.657 INFO  Test method has started.
+2024-10-16 17:37:58.704 INFO  loginWithDataProvider test method has finished. -->Failed
+2024-10-16 17:38:39.404 INFO  Test method has started.
+2024-10-16 17:38:42.429 INFO  loginWithDataProvider test method has finished. -->Passed
+2024-10-16 17:38:42.432 INFO  Test method has started.
+2024-10-16 17:39:13.086 INFO  loginWithDataProvider test method has finished. -->Failed
+2024-10-16 17:42:50.210 INFO  Test method has started.
+2024-10-16 17:42:53.781 INFO  loginWithDataProvider test method has finished. -->Passed
+2024-10-16 17:42:53.793 INFO  Test method has started.
+2024-10-16 17:43:24.439 INFO  loginWithDataProvider test method has finished. -->Failed
+2024-10-16 17:44:44.706 INFO  Test method has started.
+2024-10-16 17:44:47.580 INFO  loginWithDataProvider test method has finished. -->Passed
+2024-10-16 17:44:47.586 INFO  Test method has started.
+2024-10-16 17:44:48.394 INFO  loginWithDataProvider test method has finished. -->Passed
+2024-10-16 17:45:37.750 INFO  Test method has started.
+2024-10-16 17:45:40.522 INFO  loginWithDataProvider test method has finished. -->Passed
+2024-10-16 17:45:40.529 INFO  Test method has started.
+2024-10-16 17:45:41.128 INFO  loginWithDataProvider test method has finished. -->Passed
+2024-10-16 17:45:41.129 INFO  Test method has started.
+2024-10-16 17:45:41.825 INFO  loginWithDataProvider test method has finished. -->Passed
+2024-10-16 17:45:41.833 INFO  Test method has started.
+2024-10-16 17:45:47.521 INFO  loginWithDataProvider test method has finished. -->Passed
+2024-10-16 17:45:47.534 INFO  Test method has started.
+2024-10-16 17:45:48.041 INFO  loginWithDataProvider test method has finished. -->Passed
+2024-10-16 17:45:48.043 INFO  Test method has started.
+2024-10-16 17:46:18.438 INFO  loginWithDataProvider test method has finished. -->Failed
+2024-10-16 17:46:18.439 INFO  Test method has started.
+2024-10-16 17:46:19.288 INFO  loginWithDataProvider test method has finished. -->Passed
+2024-10-16 17:46:19.290 INFO  Test method has started.
+2024-10-16 17:46:19.724 INFO  loginWithDataProvider test method has finished. -->Passed
+2024-10-16 17:50:09.218 INFO  Test method has started.
+2024-10-16 17:50:11.571 INFO  loginWithDataProvider test method has finished. -->Passed
+2024-10-16 17:50:11.574 INFO  Test method has started.
+2024-10-16 17:50:12.013 INFO  loginWithDataProvider test method has finished. -->Passed
+2024-10-16 17:50:12.018 INFO  Test method has started.
+2024-10-16 17:50:12.590 INFO  loginWithDataProvider test method has finished. -->Passed
+2024-10-16 17:50:12.593 INFO  Test method has started.
+2024-10-16 17:50:18.268 INFO  loginWithDataProvider test method has finished. -->Passed
+2024-10-16 17:50:18.274 INFO  Test method has started.
+2024-10-16 17:50:18.578 INFO  loginWithDataProvider test method has finished. -->Passed
+2024-10-16 17:50:18.579 INFO  Test method has started.
+2024-10-16 17:50:18.877 INFO  loginWithDataProvider test method has finished. -->Passed
+2024-10-16 17:50:18.878 INFO  Test method has started.
+2024-10-16 17:50:19.815 INFO  loginWithDataProvider test method has finished. -->Passed
+2024-10-16 17:50:19.817 INFO  Test method has started.
+2024-10-16 17:50:20.184 INFO  loginWithDataProvider test method has finished. -->Passed
+2024-10-21 17:24:01.576 INFO  Test method has started.
+2024-10-21 17:24:08.202 INFO  loginWithDataProvider test method has finished. -->Passed
+2024-10-21 17:24:08.210 INFO  Test method has started.
+2024-10-21 17:24:08.932 INFO  loginWithDataProvider test method has finished. -->Passed
+2024-10-21 17:24:08.934 INFO  Test method has started.
+2024-10-21 17:24:09.790 INFO  loginWithDataProvider test method has finished. -->Passed
+2024-10-21 17:24:09.794 INFO  Test method has started.
+2024-10-21 17:24:15.535 INFO  loginWithDataProvider test method has finished. -->Passed
+2024-10-21 17:24:15.542 INFO  Test method has started.
+2024-10-21 17:24:16.108 INFO  loginWithDataProvider test method has finished. -->Passed
+2024-10-21 17:24:16.109 INFO  Test method has started.
+2024-10-21 17:24:16.706 INFO  loginWithDataProvider test method has finished. -->Passed
+2024-10-21 17:24:16.709 INFO  Test method has started.
+2024-10-21 17:24:17.981 INFO  loginWithDataProvider test method has finished. -->Passed
+2024-10-21 17:24:17.983 INFO  Test method has started.
+2024-10-21 17:24:18.573 INFO  loginWithDataProvider test method has finished. -->Passed
+2024-10-21 17:47:37.791 INFO  Test başladı: logTest()
+2024-10-21 17:47:37.799 INFO  Test başarılı: Sonuç = 8
+2024-10-21 17:47:37.800 INFO  Test bitti: logTest()
